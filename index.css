@@ -1,3 +1,31 @@
 .header {
     display: flex;
+    justify-content: space-between;
+    border: 1px solid #000;
+}
+.logo{
+    width: 150px;
+}
+.nav-items{
+    display: flex;
+}
+.nav-items li {
+    padding: 10px;
+    margin: 10px;
+    
+}
+.nav-items ul {
+    display: flex;
+    font-size: 24px;
+    padding: 0px 20px;
+    list-style-type: none;
+    align-items: center;
+}
+.res-card{
+ width: 200px;
+ height: 300px;
+ border: 1px solid #000;   
+}
+.search{
+    padding: 10px;
 }

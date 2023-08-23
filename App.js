@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import RestaurantCard from "./component/RestaurantCard";
+
 
 const Header = () => {
   return (
@@ -22,10 +24,22 @@ const Header = () => {
   );
 };
 
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="resturent-container">
+        <RestaurantCard />
+      </div>
+    </div>
+  );
+};
+
 const AppLayout = () => {
   return (
     <div className="app">
       <Header />
+      <Body />
     </div>
   );
 };
