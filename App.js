@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import RestaurantCard from "./component/RestaurantCard";
-
+import RestaurantCard from "./src/RestaurantCard";
 
 const Header = () => {
   return (
@@ -14,10 +13,10 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Cart</li>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
         </ul>
       </div>
     </div>
@@ -29,6 +28,22 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="resturent-container">
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
         <RestaurantCard />
       </div>
     </div>
