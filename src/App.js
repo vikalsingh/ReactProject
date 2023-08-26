@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import RestaurantCard from "./src/RestaurantCard";
+import RestaurantCard from "./components/RestaurantCard";
 
 const Header = () => {
   return (
