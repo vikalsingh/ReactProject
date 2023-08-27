@@ -68,3 +68,10 @@ h3, a, span, ul, div{
     padding: 5px;
     margin: 10px;
 }
+.filter {
+    display: flex;
+}
+.searchBox{
+    height: 30px;
+    margin: 10px;
+}
