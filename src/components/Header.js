@@ -1,21 +1,22 @@
 import { Link } from "react-router-dom";
+import reactLogo from "./../../images/logo.png";
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className="flex justify-between shadow-lg px-6 sticky top-0 bg-amber-200">
       <div className="logo-container">
         <img
-          className="logo"
-          src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"
+          className="w-36 bg-amber-200"
+          src={reactLogo}
         />
       </div>
-      <div className="nav-items">
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-          <li><Link to="/flightticket">FlightTicket</Link></li>
+      <div className="flex items-center">
+        <ul className="flex m-4">
+          <li className="p-4"><Link to="/">Home</Link></li>
+          <li className="p-4"><Link to="/about">About Us</Link></li>
+          <li className="p-4">Contact Us</li>
+          <li className="p-4">Cart</li>
+          <li className="p-4"><Link to="/flightticket">FlightTicket</Link></li>
         </ul>
       </div>
     </div>
