@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -14,6 +15,8 @@ const AppLayout = () => {
   );
 };
 
+const Fight = lazy(() => import("./components/FlightTicket"));
+
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +30,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/flightticket",
+        element: (
+          <Suspense fallback={"Loading...."}>
+            <Fight />
+          </Suspense>
+        ),
       },
     ],
   },
