@@ -1,57 +1,38 @@
-import {useContext} from "react";
+import User from "./User";
+import UserClass from "./UserClass";
+import { Component } from "react";
 import UserContext from "../utils/UserContext";
 
-const About = () => {
+class About extends Component {
+  constructor(props) {
+    super(props);
 
-  const {loggedInUser} = useContext(UserContext)
+    //console.log("Parent Constructor");
+  }
 
-  return (
-    <div>
-      <h1 className="font-bold">Currently login user: {loggedInUser}</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-      <h1>About us page</h1>
-    </div>
-  );
-};
+  componentDidMount() {
+    //console.log("Parent Component Did Mount");
+  }
+
+  render() {
+    //console.log("Parent Render");
+
+    return (
+      <div>
+        <h1>About Class Component</h1>
+        <div>
+          LoggedIn User
+          <UserContext.Consumer>
+            {({ loggedInUser }) => (
+              <h1 className="text-xl font-bold">{loggedInUser}</h1>
+            )}
+          </UserContext.Consumer>
+        </div>
+        <h2>This is Food cart React project</h2>
+        <UserClass name={"First"} location={"Chandigarh"} />
+      </div>
+    );
+  }
+}
 
 export default About;
